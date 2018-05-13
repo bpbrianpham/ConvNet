@@ -39,7 +39,11 @@ else:
     x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, 1)
     x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
     input_shape = (img_rows, img_cols, 1)
-
+'''
+print(x_train)
+print(input_shape)
+print(img_rows)
+'''
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 x_train /= 255
@@ -131,6 +135,5 @@ model_3.fit(x_train, y_train,
 score_3 = model_3.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score_3[0])
 print('Test accuracy:', score_3[1])
-
 
 
